@@ -12,7 +12,7 @@ pipeline {
                 sh 'docker tag image3 shaikmustafa/paytm:movie'
             }
         }
-        stage('Push') {
+        stage('push') {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'dockerhub') {
